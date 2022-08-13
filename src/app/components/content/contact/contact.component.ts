@@ -1,6 +1,9 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { Contact, ContactService } from 'src/app/services/contact.service';
+import { Component } from '@angular/core';
+import { environment } from '../../../../environments/environment';
+export class Contact {
+  constructor(public name: string, public email: string, public message: string) { }
+}
 
 @Component({
   selector: 'app-contact',
@@ -15,26 +18,15 @@ import { Contact, ContactService } from 'src/app/services/contact.service';
     ])
   ]
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   contact = new Contact('', '', '');
   submitted = false;
   inView = false;
+  mailkey: string;
 
-  constructor(private contactService: ContactService) { }
-
-  ngOnInit(): void {
+  constructor() {
+    this.mailkey = environment.MAIL_KEY;
   }
 
-  submit() {
-    this.submitted = true;
-    this.contactService.post(this.contact).then(data => {
-
-    }).catch(error => {
-
-    }).finally(() => {
-      this.contact = new Contact('', '', '');
-      this.submitted = false;
-    });
-  }
 }

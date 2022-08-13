@@ -20,7 +20,6 @@ import { SocialsComponent } from './components/content/socials/socials.component
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppVisibleDirective } from './directives/visible.directive';
-import { ContactService } from './services/contact.service';
 import { UtilsService } from './services/utils.service';
 
 @NgModule({
@@ -56,7 +55,6 @@ import { UtilsService } from './services/utils.service';
     })
   ],
   providers: [
-    ContactService,
     UtilsService
   ],
   bootstrap: [AppComponent]

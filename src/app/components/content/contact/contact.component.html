@@ -2,7 +2,13 @@
     <div class="title">
         <h1 appVisible>{{'contact-header' | translate | uppercase}}</h1>
     </div>
-    <form class="contact-form" #contactForm="ngForm" appVisible (inView)="inView = true" [@fade]="inView">
+    <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form" #contactForm="ngForm"
+        appVisible (inView)="inView = true" [@fade]="inView">
+
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <input type="hidden" name="access_key" [value]="mailkey" />
+        <input type="hidden" name="subject" value="New Message from website NG" />
+
         <span class="contact-form-title">
             {{'contact' | translate}}
         </span>
@@ -12,16 +18,17 @@
             <label for="name" class="label"> {{'contact-name' | translate}}</label>
         </div>
         <div class="email-input">
-            <input class="input" id="_replyto" type="email" name="_replyto" placeholder="Email"
-                [(ngModel)]="contact._replyto" required>
-            <label for="_replyto" class="label">Email</label>
+            <input class="input" id="email" type="email" name="email" placeholder="Email" [(ngModel)]="contact.email"
+                required>
+            <label for="email" class="label">Email</label>
         </div>
         <div class="message-input">
             <textarea class="text-area" id="message" name="message" [(ngModel)]="contact.message" required></textarea>
             <label for="message" class="label"></label>
         </div>
         <div class="container">
-            <button class="button" role="button"> {{'contact-button' | translate}}</button>
+            <button class="button" role="button" type="submit" [disabled]="!contactForm.valid"> {{'contact-button' |
+                translate}}</button>
         </div>
     </form>
 </div>
