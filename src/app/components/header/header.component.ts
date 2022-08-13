@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ActivationEnd, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { filter, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,21 +10,22 @@ import { filter, Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   distance = 0;
+  menuOpen = false;
   fragment: string | null = 'intro';
   lang: string = '';
   onTranslationChangeSubs!: Subscription;
 
   @HostListener('window:scroll')
-  doSomething() {
+  onScroll() {
     this.distance = window.pageYOffset;
+    this.menuOpen = false;
   }
 
-  constructor(private router: Router, private translate: TranslateService) { }
+  constructor(private route: ActivatedRoute, private translate: TranslateService) { }
 
   ngOnInit(): void {
-    this.router.events.pipe(filter(event => event instanceof ActivationEnd)).subscribe((event: any) => {
-      this.fragment = event.snapshot.fragment;
-    });
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+
     this.lang = this.translate.currentLang;
     this.onTranslationChangeSubs = this.translate.onLangChange.subscribe((translation: LangChangeEvent) => {
       this.lang = translation.lang;
@@ -37,6 +38,10 @@ export class HeaderComponent implements OnInit {
 
   setLanguage(language: string) {
     this.translate.use(language);
+  }
+
+  openCloseMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
 }

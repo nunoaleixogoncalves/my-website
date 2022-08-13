@@ -1,4 +1,4 @@
-<div class="header" [ngClass]="{'not-top': distance > 200}">
+<div class="header" [ngClass]="{'not-top': distance > 200, 'open': menuOpen}">
     <nav>
         <ul>
             <li [ngClass]="{'active': fragment === 'intro' || !fragment}">
@@ -28,4 +28,8 @@
         <span class="fi fi-pt" [ngClass]="{active: lang==='pt'}" (click)="setLanguage('pt')"
             [title]="'change-lang-pt' | translate"></span>
     </div>
+
+    <span class="small-menu-btn" [ngClass]="{close: menuOpen}" (click)="openCloseMenu()">
+        <div class='menu-button'></div>
+    </span>
 </div>

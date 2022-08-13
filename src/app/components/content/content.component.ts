@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class ContentComponent {
   loading = false;
   goUp = false;
 
-  constructor(private utilsService: UtilsService) { }
+  constructor(private _router: Router, private utilsService: UtilsService) { }
 
   @HostListener('document:scroll')
   scroll() {
@@ -29,7 +30,8 @@ export class ContentComponent {
   }
 
   justGoUp() {
-    this.utilsService.scrollToAnchor('intro');
+    this._router.navigate(['/'], { fragment: 'intro' });
+    // this.utilsService.scrollToAnchor('intro');
   }
 
 }
