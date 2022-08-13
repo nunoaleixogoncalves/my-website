@@ -1,0 +1,31 @@
+<div class="header" [ngClass]="{'not-top': distance > 200}">
+    <nav>
+        <ul>
+            <li [ngClass]="{'active': fragment === 'intro' || !fragment}">
+                <!-- routerlink active doest work well on fragments!
+                    <a routerLink="/" fragment="intro" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Intro</a>
+                -->
+                <a routerLink="/" fragment="intro">{{'intro-header' | translate}}</a>
+            </li>
+            <li [ngClass]="{'active': fragment === 'about'}">
+                <a routerLink="/" fragment="about">{{'about-header' | translate}}</a>
+            </li>
+            <li [ngClass]="{'active': fragment === 'skills'}">
+                <a routerLink="/" fragment="skills">{{'skills-header' | translate}}</a>
+            </li>
+            <li [ngClass]="{'active': fragment === 'socials'}">
+                <a routerLink="/" fragment="socials">{{'socials-header' | translate}}</a>
+            </li>
+            <li [ngClass]="{'active': fragment === 'contact'}">
+                <a routerLink="/" fragment="contact">{{'contact-header' | translate}}</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="flags">
+        <span class="fi fi-gb" [ngClass]="{active: lang==='en'}" (click)="setLanguage('en')"
+            [title]="'change-lang-en' | translate"></span>
+        <span class="fi fi-pt" [ngClass]="{active: lang==='pt'}" (click)="setLanguage('pt')"
+            [title]="'change-lang-pt' | translate"></span>
+    </div>
+</div>

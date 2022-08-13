@@ -1,0 +1,13 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .about-text {
+    line-height: 28px;
+    padding: 20px;
+    .whoami {
+      margin-bottom: 10px;
+    }
+  }
+}

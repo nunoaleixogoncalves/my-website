@@ -1,0 +1,14 @@
+<div id="about" class="about section">
+    <div class="title">
+        <h1 appIsVisible>{{'about-header' | translate | uppercase}}</h1>
+    </div>
+    <div class="about-text">
+        <div class="whoami">
+            <span class="text-mark">
+                $ whoami
+            </span>
+        </div>
+        <div [innerHTML]="'whoami' | translate: translateParam">
+        </div>
+    </div>
+</div>

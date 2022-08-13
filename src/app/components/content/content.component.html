@@ -1,0 +1,11 @@
+<app-loading *ngIf="loading; else content" (loadingEvent)="loading=false"></app-loading>
+<ng-template #content>
+    <div @fade class="content">
+        <app-intro></app-intro>
+        <app-about></app-about>
+        <app-skills></app-skills>
+        <app-socials></app-socials>
+        <app-contact></app-contact>
+    </div>
+    <button *ngIf="goUp" type="button" class="scroll-btn" (click)="justGoUp()">☝️</button>
+</ng-template>

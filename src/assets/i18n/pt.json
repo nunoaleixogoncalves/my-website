@@ -1,0 +1,13 @@
+{
+    "intro-header": "Eu",
+    "about-header": "Sobre",
+    "skills-header": "Competências",
+    "socials-header": "Ligações",
+    "contact-header": "Contacto",
+    "change-lang-en": "Alterar para Inglês",
+    "change-lang-pt": "Alterar para Português",
+    "whoami": "Olá, meu nome é <span class=\"text-mark\">Nuno</span>! Tenho {{yearsOld}} anos e gosto de tudo o que envolve <span class=\"text-mark\">TECNOLOGIA</span>! <br> Trabalho como developer full-stack à {{yearsWork}} anos e adoro.<br>Faço tudo desde frontend até backend e um bocadinho mais!<br> Trabalho principalmente com <span class=\"text-mark\">Angular</span> e <span class=\"text-mark\">Spring boot</span> mas dou uns toques ou tenho interesse em <span class=\"text-mark\">Ansible</span>, <span class=\"text-mark\">Docker</span>, <span class=\"text-mark\">Kubernetes</span> e mais! <br> <br> Fora da vida profissional gosto de me considerar uma pessoa trabalhadora, de mente aberta e divertida de conviver. <br> Alguns dos meus interesses consistem em jogos, impressão 3d, enduro, bicicleta e tudo relacionado com natureza.",
+    "contact": "Entrar em Contacto",
+    "contact-name": "Nome",
+    "contact-button": "Enviar mensagem"
+}

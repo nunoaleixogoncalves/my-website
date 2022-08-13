@@ -1,0 +1,27 @@
+<div id="contact" class="contact section">
+    <div class="title">
+        <h1 appIsVisible>{{'contact-header' | translate | uppercase}}</h1>
+    </div>
+    <form class="contact-form" #contactForm="ngForm">
+        <span class="contact-form-title">
+            {{'contact' | translate}}
+        </span>
+        <div class="name-input">
+            <input class="input" id="name" type="text" name="name" placeholder="Name" [(ngModel)]="contact.name"
+                required>
+            <label for="name" class="label"> {{'contact-name' | translate}}</label>
+        </div>
+        <div class="email-input">
+            <input class="input" id="_replyto" type="email" name="_replyto" placeholder="Email"
+                [(ngModel)]="contact._replyto" required>
+            <label for="_replyto" class="label">Email</label>
+        </div>
+        <div class="message-input">
+            <textarea class="text-area" id="message" name="message" [(ngModel)]="contact.message" required></textarea>
+            <label for="message" class="label"></label>
+        </div>
+        <div class="container">
+            <button class="button" role="button"> {{'contact-button' | translate}}</button>
+        </div>
+    </form>
+</div>

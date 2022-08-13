@@ -1,0 +1,24 @@
+@import "../../../assets/scss/variables.scss";
+
+.footer{
+   position: relative;
+   height: 200px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   a{
+    text-decoration: none;
+    color: $primary;
+    &:hover{
+        text-decoration: underline;
+    }
+   }
+   
+   p{
+      position: absolute;
+      bottom: 50px;
+   }
+}

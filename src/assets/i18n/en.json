@@ -1,0 +1,13 @@
+{
+    "intro-header": "Intro",
+    "about-header": "About",
+    "skills-header": "Skills",
+    "socials-header": "Socials",
+    "contact-header": "Contact",
+    "change-lang-en": "Change to English",
+    "change-lang-pt": "Change to Portuguese",
+    "whoami": "Hi there, i'm <span class=\"text-mark\">Nuno</span>! I have {{yearsOld}} years old and like evething <span class=\"text-mark\">TECH</span>! <br> I work as a full-stack developer for {{yearsWork}} years now and i love it.<br>I do everthing from the frontend to backend and a little bit more!<br>I work mostly with <span class=\"text-mark\">Angular</span> and <span class=\"text-mark\">Spring boot</span> but i dable a bit or have interest in <span class=\"text-mark\">Ansible</span>, <span class=\"text-mark\">Docker</span>, <span class=\"text-mark\">Kubernetes</span> and more! <br> <br> Ouside the professional life i like to consider myself as a hard worker, open minded and fun to be around person. <br> Some of my interests are games, 3d printing, enduro, biking and everthing nature related.",
+    "contact": "Contact me",
+    "contact-name": "Name",
+    "contact-button": "Send Email"
+}
