@@ -18,13 +18,15 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll')
   onScroll() {
     this.distance = window.pageYOffset;
-    this.menuOpen = false;
   }
 
   constructor(private route: ActivatedRoute, private translate: TranslateService) { }
 
   ngOnInit(): void {
-    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+    this.route.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+      this.menuOpen = false;
+    });
 
     this.lang = this.translate.currentLang;
     this.onTranslationChangeSubs = this.translate.onLangChange.subscribe((translation: LangChangeEvent) => {
