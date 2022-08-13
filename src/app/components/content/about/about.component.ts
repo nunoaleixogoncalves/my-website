@@ -20,4 +20,8 @@ export class AboutComponent implements OnInit {
     this.translateParam = { yearsWork: this.yearsWork, yearsOld: this.yearsOld }
   }
 
+  inview() {
+    console.log('view');
+  }
+
 }

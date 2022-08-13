@@ -19,7 +19,7 @@ import { SkillsComponent } from './components/content/skills/skills.component';
 import { SocialsComponent } from './components/content/socials/socials.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { IsVisibleDirective } from './directives/is-visible.directive';
+import { AppVisibleDirective } from './directives/visible.directive';
 import { ContactService } from './services/contact.service';
 import { UtilsService } from './services/utils.service';
 
@@ -35,7 +35,7 @@ import { UtilsService } from './services/utils.service';
     SkillsComponent,
     ContactComponent,
     LoadingComponent,
-    IsVisibleDirective
+    AppVisibleDirective
   ],
   imports: [
     BrowserModule,
