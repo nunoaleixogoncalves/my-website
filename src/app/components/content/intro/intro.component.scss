@@ -4,7 +4,7 @@
   height: calc(100vh - 60px);
   min-height: 700px;
 
-  background-image: url("/assets/code.jpg");
+  background-image: url("/assets/img/code.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,11 +32,15 @@
     padding-top: 100px;
 
     img {
-      width: 300px;
-      height: 300px;
+      max-width: 300px;
+      aspect-ratio: 1;
+      width: 100%;
       border-radius: 50%;
       filter: opacity(0.8);
       border: 2px solid $primary;
+    }
+    > * {
+      text-align: center;
     }
 
     h2 {

@@ -19,6 +19,7 @@ body {
   padding: 0;
   box-shadow: none;
   outline: none;
+  word-break: break-word;
 }
 
 .font-bold {
@@ -37,7 +38,7 @@ body {
     opacity: 0.1;
     width: max-content;
     &.active {
-      opacity: 0.5;
+      opacity: 0.8;
     }
   }
 }

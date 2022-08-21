@@ -1,5 +1,11 @@
 .socials {
   z-index: 2;
+
+  .title {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   ul {
     position: absolute;
     top: 50%;
@@ -28,7 +34,7 @@
     &.fa-github {
       position: relative;
       &::before {
-        content: url("/assets/github.svg");
+        content: url("/assets/img/github.svg");
         position: absolute;
         width: 55px;
         height: 36px;
@@ -38,7 +44,7 @@
     &.fa-linkedin {
       position: relative;
       &::before {
-        content: url("/assets/linkedin.svg");
+        content: url("/assets/img/linkedin.svg");
         position: absolute;
         width: 55px;
         height: 36px;
@@ -48,7 +54,7 @@
     &.fa-instagram {
       position: relative;
       &::before {
-        content: url("/assets/instagram.svg");
+        content: url("/assets/img/instagram.svg");
         position: absolute;
         width: 55px;
         height: 36px;
@@ -58,7 +64,7 @@
     &.fa-google {
       position: relative;
       &::before {
-        content: url("/assets/google.svg");
+        content: url("/assets/img/google.svg");
         position: absolute;
         width: 55px;
         height: 36px;

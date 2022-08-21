@@ -14,7 +14,8 @@ import { AboutComponent } from './components/content/about/about.component';
 import { ContactComponent } from './components/content/contact/contact.component';
 import { ContentComponent } from './components/content/content.component';
 import { IntroComponent } from './components/content/intro/intro.component';
-import { LoadingComponent } from './components/content/loading/loading.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { ProjectsComponent } from './components/content/projects/projects.component';
 import { SkillsComponent } from './components/content/skills/skills.component';
 import { SocialsComponent } from './components/content/socials/socials.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -34,7 +35,8 @@ import { UtilsService } from './services/utils.service';
     SkillsComponent,
     ContactComponent,
     LoadingComponent,
-    AppVisibleDirective
+    AppVisibleDirective,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

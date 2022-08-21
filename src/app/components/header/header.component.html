@@ -14,6 +14,9 @@
             <li [ngClass]="{'active': fragment === 'skills'}">
                 <a routerLink="/" fragment="skills">{{'skills-header' | translate}}</a>
             </li>
+            <li [ngClass]="{'active': fragment === 'projects'}">
+                <a routerLink="/" fragment="projects">{{'projects-header' | translate}}</a>
+            </li>
             <li [ngClass]="{'active': fragment === 'socials'}">
                 <a routerLink="/" fragment="socials">{{'socials-header' | translate}}</a>
             </li>
