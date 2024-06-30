@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -23,44 +23,38 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppVisibleDirective } from './directives/visible.directive';
 import { UtilsService } from './services/utils.service';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ContentComponent,
-    FooterComponent,
-    IntroComponent,
-    SocialsComponent,
-    AboutComponent,
-    SkillsComponent,
-    ContactComponent,
-    LoadingComponent,
-    AppVisibleDirective,
-    ProjectsComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    RouterModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-      defaultLanguage: 'en'
-    })
-  ],
-  providers: [
-    UtilsService
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        ContentComponent,
+        FooterComponent,
+        IntroComponent,
+        SocialsComponent,
+        AboutComponent,
+        SkillsComponent,
+        ContactComponent,
+        LoadingComponent,
+        AppVisibleDirective,
+        ProjectsComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        RouterModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+            defaultLanguage: 'en'
+        })], providers: [
+        UtilsService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
 
 // AoT requires an exported function for factories
