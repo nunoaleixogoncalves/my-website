@@ -33,6 +33,7 @@
 
     &.fa-github {
       position: relative;
+
       &::before {
         content: url("/assets/img/github.svg");
         position: absolute;
@@ -41,8 +42,10 @@
         top: -5px;
       }
     }
+
     &.fa-linkedin {
       position: relative;
+
       &::before {
         content: url("/assets/img/linkedin.svg");
         position: absolute;
@@ -51,8 +54,10 @@
         top: -5px;
       }
     }
+
     &.fa-instagram {
       position: relative;
+
       &::before {
         content: url("/assets/img/instagram.svg");
         position: absolute;
@@ -61,8 +66,10 @@
         top: -5px;
       }
     }
+
     &.fa-google {
       position: relative;
+
       &::before {
         content: url("/assets/img/google.svg");
         position: absolute;
@@ -97,6 +104,7 @@
     transition: 0.5s;
     box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
   }
+
   ul li a:before {
     content: "";
     position: absolute;
@@ -108,6 +116,7 @@
     transform: 0.5s;
     transform: rotate(0deg) skewY(-45deg);
   }
+
   ul li a:after {
     content: "";
     position: absolute;
@@ -136,9 +145,11 @@
   ul li:hover:nth-child(1) a {
     background: #3b5998;
   }
+
   ul li:hover:nth-child(1) a:before {
     background: #365492;
   }
+
   ul li:hover:nth-child(1) a:after {
     background: #4a69ad;
   }
@@ -146,9 +157,11 @@
   ul li:hover:nth-child(2) a {
     background: #00aced;
   }
+
   ul li:hover:nth-child(2) a:before {
     background: #097aa5;
   }
+
   ul li:hover:nth-child(2) a:after {
     background: #53b9e0;
   }
@@ -156,9 +169,11 @@
   ul li:hover:nth-child(3) a {
     background: #dd4b39;
   }
+
   ul li:hover:nth-child(3) a:before {
     background: #b33a2b;
   }
+
   ul li:hover:nth-child(3) a:after {
     background: #e66a5a;
   }
@@ -166,9 +181,11 @@
   ul li:hover:nth-child(4) a {
     background: #e4405f;
   }
+
   ul li:hover:nth-child(4) a:before {
     background: #d81c3f;
   }
+
   ul li:hover:nth-child(4) a:after {
     background: #e46880;
   }

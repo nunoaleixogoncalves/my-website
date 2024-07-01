@@ -3,13 +3,11 @@
 .intro {
   height: calc(100vh - 60px);
   min-height: 700px;
-
   background-image: url("/assets/img/code.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   padding-top: 105px;
 
   &::before {
@@ -39,7 +37,8 @@
       filter: opacity(0.8);
       border: 2px solid $primary;
     }
-    > * {
+
+    >* {
       text-align: center;
     }
 
